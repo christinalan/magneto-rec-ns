@@ -1,4 +1,4 @@
-import { World } from "./World/World.js";
+import { World } from "./world/World.js";
 
 let listenButton = document.getElementById("startButton");
 

@@ -1,6 +1,9 @@
-import * as THREE from "https://unpkg.com/three@0.121.1/build/three.module.js";
-import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/helpers/PositionalAudioHelper.js";
-import { createCamera } from "./camera.js";
+import * as THREE from "../../../node_modules/three/build/three.module.js";
+import { PositionalAudioHelper } from "three/examples/jsm/helpers/PositionalAudioHelper.js";
+
+// import * as THREE from "https://unpkg.com/three@0.121.1/build/three.module.js";
+// import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/helpers/PositionalAudioHelper.js";
+// import { createCamera } from "./camera.js";
 
 let analyser, audio, audioData;
 let audios = [];

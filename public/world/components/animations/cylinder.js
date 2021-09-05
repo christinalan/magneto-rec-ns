@@ -1,6 +1,12 @@
 // import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js";
-import * as THREE from "https://unpkg.com/three@0.121.1/build/three.module.js";
-import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/helpers/PositionalAudioHelper.js";
+// import * as THREE from "https://unpkg.com/three@0.121.1/build/three.module.js";
+// import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/helpers/PositionalAudioHelper.js";
+
+// import * as THREE from "../../../../node_modules/three/build/three.module.js";
+"use strict";
+
+var THREE = require("three");
+import { PositionalAudioHelper } from "three/examples/jsm/helpers/PositionalAudioHelper.js";
 import { camera } from "../../World.js";
 // import { audioData } from "../../World.js";
 
@@ -40,7 +46,7 @@ function createCylinder() {
   const sig6 = document.getElementById("track8");
 
   const textureLoader = new THREE.TextureLoader();
-  const texture = textureLoader.load("images/textures/sdr_earth.jpeg");
+  const texture = textureLoader.load("public/images/textures/sdr_earth.jpeg");
 
   const geo = new THREE.CylinderGeometry(50, 50, 2000, 2000);
   const geo1 = new THREE.CylinderGeometry(8, 8, 500, 500);

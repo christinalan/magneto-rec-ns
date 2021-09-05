@@ -1,8 +1,14 @@
-import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js";
-import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/helpers/PositionalAudioHelper.js";
+// import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js";
+// import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/helpers/PositionalAudioHelper.js";
+
+// import * as THREE from "../../../../node_modules/three/build/three.module.js";
+"use strict";
+
+var THREE = require("three");
+import { PositionalAudioHelper } from "three/examples/js/helpers/PositionalAudioHelper.js";
 import { scene } from "../../World.js";
 import { camera } from "../../World.js";
-import { analyser } from "../animations/cylinder.js";
+import { analyser } from "./cylinder.js";
 import { createRenderer } from "../../systems/renderer.js";
 
 let fam = [];
@@ -25,7 +31,7 @@ function generateBirds() {
   clock = new THREE.Clock();
   mouse = new THREE.Vector2();
   const textureLoader = new THREE.TextureLoader();
-  texture = textureLoader.load("images/textures/3GWCDMA.png");
+  texture = textureLoader.load("public/images/textures/3GWCDMA.png");
 
   data = analyser.getFrequencyData();
 
@@ -56,7 +62,7 @@ function generateBirds() {
   const listener = new THREE.AudioListener();
   camera.add(listener);
 
-  audioLoader.load("sounds/ebird/rockpigeonwing.mp3", function (buffer) {
+  audioLoader.load("public/sounds/ebird/rockpigeonwing.mp3", function (buffer) {
     for (let i = 0; i < 1; i++) {
       audio = new THREE.PositionalAudio(listener);
 

@@ -1,8 +1,13 @@
-import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js";
+// import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js";
+// import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/helpers/PositionalAudioHelper.js";
+// import * as THREE from "../../../../node_modules/three/build/three.module.js";
+"use strict";
+
+var THREE = require("three");
+import { PositionalAudioHelper } from "three/examples/js/helpers/PositionalAudioHelper.js";
 import { createRenderer } from "../../systems/renderer.js";
 import { scene } from "../../World.js";
 import { camera } from "../../World.js";
-import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/helpers/PositionalAudioHelper.js";
 
 let last = performance.now();
 let birds;
@@ -123,7 +128,7 @@ function createLineBird() {
 
   const audioLoader = new THREE.AudioLoader();
 
-  audioLoader.load("sounds/snippets/monk3.mp3", function (buffer) {
+  audioLoader.load("public/sounds/snippets/monk3.mp3", function (buffer) {
     audio = new THREE.PositionalAudio(listener);
     audio.setBuffer(buffer);
     audio.setDistanceModel("exponential");

@@ -1,5 +1,8 @@
-import * as THREE from "https://unpkg.com/three@0.121.1/build/three.module.js";
-import { camera } from "../World.js";
+// import * as THREE from "https://unpkg.com/three@0.121.1/build/three.module.js";
+// import * as THREE from "../../../node_modules/three/build/three.module.js";
+"use strict";
+
+var THREE = require("three");
 
 let texture;
 function createScene() {
@@ -7,12 +10,12 @@ function createScene() {
   // scene.background = new THREE.Color(0xafe2fe);
   const textureLoader = new THREE.CubeTextureLoader();
   texture = textureLoader.load([
-    "images/textures/pos-x.jpg",
-    "images/textures/neg-x.jpg",
-    "images/textures/pos-y.jpg",
-    "images/textures/neg-y.jpg",
-    "images/textures/pos-z.jpg",
-    "images/textures/neg-z.jpg",
+    "public/images/textures/pos-x.jpg",
+    "public/images/textures/neg-x.jpg",
+    "public/images/textures/pos-y.jpg",
+    "public/images/textures/neg-y.jpg",
+    "public/images/textures/pos-z.jpg",
+    "public/images/textures/neg-z.jpg",
   ]);
   scene.background = texture;
 
