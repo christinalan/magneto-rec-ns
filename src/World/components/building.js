@@ -1,5 +1,5 @@
-import * as THREE from "https://unpkg.com/three@0.121.1/build/three.module.js";
-import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/helpers/PositionalAudioHelper.js";
+import * as THREE from "../../js/build/three.module.js";
+import { PositionalAudioHelper } from "../../js/examples/jsm/helpers/PositionalAudioHelper.js";
 import { camera } from "../World.js";
 
 let floors = [];

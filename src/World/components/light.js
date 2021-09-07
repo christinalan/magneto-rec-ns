@@ -1,4 +1,4 @@
-import * as THREE from "https://unpkg.com/three@0.121.1/build/three.module.js";
+import * as THREE from "../../js/build/three.module.js";
 
 function createAmbient() {
   const ambientLight = new THREE.AmbientLight(0xa2b6d1, 0.8);

@@ -38,7 +38,7 @@ class World {
     // const orbitControls = createOrbitControls(camera, renderer.domElement);
 
     const ambientL = createAmbient();
-    // const dirL = createDirectional();
+    const dirL = createDirectional();
     const floors = createFloor();
 
     //animations
@@ -60,8 +60,7 @@ class World {
       controls
     );
 
-    scene.add(ambientL, birds, birdLine);
-    // scene.add(ambientL, birds, birdLine);
+    scene.add(ambientL, birds, birdLine, dirL);
 
     for (let i = 0; i < floors.length; i++) {
       scene.add(floors[i]);
